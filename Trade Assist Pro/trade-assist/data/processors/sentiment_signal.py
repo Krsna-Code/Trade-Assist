@@ -2,6 +2,8 @@ import os
 import re
 import sys
 
+import pandas as pd
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../../.."))
 
 from data.scrapers.news_scraper import fetch_oil_news, fetch_market_news
@@ -42,9 +44,10 @@ def score_headline(text: str) -> float:
 
 
 def compute_sentiment_signal(days_back: int = 2) -> dict:
-    oil_articles = fetch_oil_news(days_back=days_back)
-    market_articles = fetch_market_news(days_back=days_back)
-    all_articles = oil_articles + market_articles
+    oil_df = fetch_oil_news(days_back=days_back)
+    market_df = fetch_market_news(days_back=days_back)
+    combined = pd.concat([oil_df, market_df], ignore_index=True)
+    all_articles = combined.to_dict("records")
 
     if not all_articles:
         return {
