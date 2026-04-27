@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-In%20Development-orange?style=flat-square)]()
 
-> ⚠️ **Disclaimer:** This is a portfolio and research project built for educational purposes. It is **not financial advice**. Never trade real money based solely on any automated system. Options trading and day trading carry significant risk of loss.
+> ⚠️ **Disclaimer:** This is a portfolio and research project built for educational purposes. It is **not financial advice**. Never trade real money based solely on any automated system. Options trading and day trading carry significant risk of loss..
 
 ---
 
